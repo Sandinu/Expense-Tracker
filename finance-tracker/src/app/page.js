@@ -17,3 +17,4 @@ export default function Home() {
 //ui advanced components - aciternity
 //databese - postgresql
 //database managing library - drizzle orm
+//database console - neon.tech console
