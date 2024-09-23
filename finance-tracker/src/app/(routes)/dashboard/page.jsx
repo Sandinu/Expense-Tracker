@@ -89,7 +89,6 @@ function Dashboard() {
       <CardInfo budgetList={budgetList} incomeList={incomeList} />
       <div className="grid grid-cols-1 lg:grid-cols-3 mt-6 gap-5">
         <div className="lg:col-span-2">
-          <h2>barChart</h2>
           <BarChartDashboard budgetList={budgetList} />
 
           <ExpenseListTable
@@ -97,7 +96,7 @@ function Dashboard() {
             refreshData={() => getBudgetList()}
           />
         </div>
-        <div className="grid gap-5">
+        <div className="flex flex-col gap-5">
           <h2 className="font-bold text-lg">Latest Budgets</h2>
           {budgetList?.length > 0
             ? budgetList.map((budget, index) => (

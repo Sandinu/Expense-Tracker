@@ -62,7 +62,7 @@ function CreateBudget({ refreshData }) {
           </div>
         </DialogTrigger>
         
-        <DialogContent >
+        <DialogContent className="bg-white">
           <DialogHeader>
             <DialogTitle>Create New Budget</DialogTitle>
             <DialogDescription>

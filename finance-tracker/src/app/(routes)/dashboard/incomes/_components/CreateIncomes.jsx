@@ -59,7 +59,7 @@ function CreateIncomes({ refreshData }) {
             <h2>Create New Income Source</h2>
           </div>
         </DialogTrigger>
-        <DialogContent>
+        <DialogContent className="bg-white">
           <DialogHeader>
             <DialogTitle>Create New Income Source</DialogTitle>
             <DialogDescription>
