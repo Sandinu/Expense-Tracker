@@ -1,6 +1,7 @@
 import React, {useEffect, useState} from "react";
 import { PiggyBank,ReceiptText, Wallet,Sparkles,CircleDollarSign, RecycleIcon } from "lucide-react";
 import formatNumber from "../../../../../utils";
+import getFinancialAdvice from "../../../../../utils/getFinancialAdvice";
 
 function CardInfo({budgetList, incomeList}) {
     const [totalBudget, setTotalBudget] = useState(0)
@@ -15,14 +16,19 @@ function CardInfo({budgetList, incomeList}) {
     }, [budgetList, incomeList])
 
     useEffect (()=>{
-        // if(totalBudget > 0 || totalIncome > 0 || totalSpend > 0){
-        //     const fetchFinanceialAdvice = async() => {
-        //         const advice = await getFiancialAdvice(totalBudget, totalIncome, totalSpend)
-        //     }
-        //     setFinancialAdvice(advice)
-        // }
-        // fetchFinanceialAdvice();
-    }, [totalBudget, totalIncome, totalSpend])
+        if (totalBudget > 0 || totalIncome > 0 || totalSpend > 0) {
+            const fetchFinancialAdvice = async () => {
+              const advice = await getFinancialAdvice(
+                totalBudget,
+                totalIncome,
+                totalSpend
+              );
+              setFinancialAdvice(advice);
+            };
+      
+            fetchFinancialAdvice();
+          }
+        }, [totalBudget, totalIncome, totalSpend]); 
 
     const CalculateCardInfo = () => {
         let totalBudget_ = 0;
