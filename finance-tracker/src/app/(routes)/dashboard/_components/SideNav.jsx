@@ -54,7 +54,7 @@ function SideNav(){
 
             <div>
                 {menuList.map((menu,index)=> (
-                    <Link href="" /*{menu.path}*/ key={index}>
+                    <Link href={menu.pathL} key={index}>
                         <h2 className={`flex gap-2 items-center text-gray-500 font-medium cursor-pointer mb-2 p-4 rounded-full hover:text-primary hover:bg-blue-200 ${path == menu.path && 'text-primary bg-blue-200'}`}>
                             <menu.icon/>
                             {menu.name}

@@ -18,3 +18,4 @@ export default function Home() {
 //databese - postgresql
 //database managing library - drizzle orm
 //database console - neon.tech console
+//charts - recharts
